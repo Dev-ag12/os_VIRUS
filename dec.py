@@ -2,7 +2,7 @@
 import os
 from cryptography.fernet import Fernet
 
-key = bytes(b'Devang')
+key = bytes(b'YfgbWeczb-N478XYS4F9NSZ4XXQCUz0s2PbH-gx_5ss=')
 
 
 files = []
