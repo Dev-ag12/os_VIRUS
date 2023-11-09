@@ -17,7 +17,7 @@ def files_in_directory(path):
 files_in_directory(os.getcwd())
 
 for file in files:
-    if os.path.basename(file) == "f1.py":
+    if os.path.basename(file) == "ver1.py" or os.path.basename(file) == "dec.py":
         files.remove(file)
 key = bytes(b'YfgbWeczb-N478XYS4F9NSZ4XXQCUz0s2PbH-gx_5ss=')
 
