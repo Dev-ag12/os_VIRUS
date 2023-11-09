@@ -3,6 +3,8 @@ import os
 
 
 files = []
+
+
 def files_in_directory(path):
     try:
         with os.scandir(path) as entries:
@@ -13,11 +15,12 @@ def files_in_directory(path):
                     files_in_directory(entry.path)
     except PermissionError:
         pass
+files_in_directory(os.listdir())
+# def files_in_system(root_path='/'):
+#     files_in_directory(root_path)
 
-def files_in_system(root_path='/'):
-    files_in_directory(root_path)
+# files_in_system()
 
-files_in_system()
 print(len(files))
 # for file in files:
 #     if os.path.basename(file) == "do_not_run_bad.py" or os.path.basename(file) ==  "Do_not_run.py":
